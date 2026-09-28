@@ -1,0 +1,13 @@
+Click Run to run the final project you will build.
+Welcome to the Band Name Generator.
+What's the name of the city you grew up in?
+nagpur
+What's your pet's name?
+muku
+Your band name could be nagpur muku
+
+Code:
+print("Welcome to the Band Name Generator.")
+city = input("What's the name of the city you grew up in?\n")
+pet = input("What's your pet's name?\n")
+print("Your band name could be " + city + " " + pet)
