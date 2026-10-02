@@ -42,3 +42,36 @@ if height >= 120:
     print(f"your final bill is {bill}")
 else:
     print("Sorry you have to grow taller before you can ride.")
+
+---
+
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M or L: ")
+pepperoni = input("Do you want pepperoni on your pizza? Y or N: ")
+extra_cheese = input("Do you want extra cheese? Y or N: ")
+bill = 0
+if size == "S":
+    bill += 15
+elif size == "M":
+    bill += 20
+elif size == "L":
+    bill += 25
+else:
+    print("Please Enter Valid Size.")
+
+if pepperoni == "Y":
+    if size == "S":
+        bill += 2
+    else:
+        bill += 3
+if extra_cheese == "Y":
+    bill += 1
+
+print(f"Your final bill is: ${bill}.")
+
+
+Welcome to Python Pizza Deliveries!
+What size pizza do you want? S, M or L: M
+Do you want pepperoni on your pizza? Y or N: Y
+Do you want extra cheese? Y or N: N
+Your final bill is: $23
