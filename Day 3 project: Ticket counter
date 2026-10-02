@@ -1,0 +1,44 @@
+Height >= 120 cm?
+│
+├── No → Can't ride
+│
+└── Yes
+     │
+     ├── Age < 12 → $5
+     ├── Age 12–18 → $7
+     └── Age 18+ → $12
+             │
+             ↓
+       Want a photo?
+       │
+       ├── Yes → +$3
+       └── No
+             │
+             ↓
+        Final bill
+code (py) : 
+
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? "))
+bill = 0
+
+if height >= 120:
+    print("You can ride the rollercoaster")
+    age = int(input("What is your age? "))
+    if age <= 12:
+        bill = 5
+        print("Please pay $5.")
+    elif age <= 18:
+        bill = 7
+        print("Please pay $7.")
+    else:
+        bill = 12
+        print("Please pay $12.")
+
+    wants_photo = input("do you want photo? (yes/no)")
+    if wants_photo == "yes":
+        print("You have to pay extra $3")
+        bill += 3 # or we can write bill = bill + 3
+    print(f"your final bill is {bill}")
+else:
+    print("Sorry you have to grow taller before you can ride.")
